@@ -1,74 +1,51 @@
 ```mermaid
 flowchart TD
 
-%% =======================
 %% USER FLOW
-%% =======================
+A["User (Copilot UI)"] --> B["API Gateway"]
+B --> C["OpenClaw Agent (Lambda)"]
 
-A[User (React Native Copilot UI)] --> B[API Gateway]
-B --> C[OpenClaw Agent Runtime (Lambda)]
-
-C --> D[Fetch User Context (DynamoDB)]
+C --> D["Fetch Context (DynamoDB)"]
 D --> C
 
-C --> E[LLM Reasoning (Bedrock / Claude)]
+C --> E["LLM (Bedrock / Claude)"]
 
-E -->|Tool Required| F[Select MCP Tool]
-E -->|No Tool| G[Direct Response]
+E -->|Tool Needed| F["Select MCP Tool"]
+E -->|No Tool| G["Direct Response"]
 
-F --> H[Invoke MCP Tool (Lambda)]
-H --> I[Tool Logic Execution]
+F --> H["Invoke MCP Tool (Lambda)"]
+H --> I["Tool Logic"]
 
-I --> J[External APIs / Data Sources]
+I --> J["External APIs / Data"]
 J --> I
 
-I --> K[Structured JSON Output]
+I --> K["Structured Output"]
 K --> C
 
-C --> L[LLM Formats Response + Actions]
+C --> L["Format Response"]
 G --> L
 
-L --> M[Response to UI]
+L --> M["Send to UI"]
 
-%% =======================
-%% USER ACTION FLOW
-%% =======================
+%% USER ACTION
+M --> N{"User Action?"}
 
-M --> N{User Clicks Action?}
+N -->|Yes| O["Invoke Action Tool"]
+O --> P["Execute (Astra / Upwardli)"]
+P --> Q["Track Event (Mixpanel / MoEngage)"]
+Q --> R["Confirmation"]
 
-N -->|Yes| O[Invoke Action MCP Tool / API]
-O --> P[Execute Action (Astra / Upwardli / etc.)]
-P --> Q[Send Event (Mixpanel / MoEngage)]
-Q --> R[Return Confirmation to User]
+N -->|No| S["End"]
 
-N -->|No| S[End]
-
-%% =======================
 %% PROACTIVE FLOW
-%% =======================
+T["EventBridge Trigger"] --> U["Daily AI Inference"]
+U --> V["Detect Insights"]
 
-T[EventBridge Daily Trigger] --> U[Run Bedrock Inference on Users]
-U --> V[Detect Insight / Risk]
+V -->|Yes| W["Invoke MCP Tool"]
+W --> X["Generate Alert"]
 
-V -->|Threshold Met| W[Invoke MCP Tool]
-W --> X[Generate Insight / Offer]
-
-X --> Y[Send Push Notification (MoEngage)]
+X --> Y["Push Notification (MoEngage)"]
 Y --> A
 
-V -->|No Insight| Z[End]
-
-%% =======================
-%% NOTES
-%% =======================
-
-subgraph MCP Tools
-    H
-    O
-end
-
-subgraph Data Layer
-    D
-    J
-end
+V -->|No| Z["End"]
 ```
