@@ -3,13 +3,11 @@ flowchart LR
     U[User - React Native App] --> UI[Copilot UI - Ask Beem]
     UI --> AGW[API Gateway]
 
-    AGW --> AR[Agent Runtime - Lambda]
+    AGW --> LAMBDA[AWS Serverless Lambda]
 
-    AR --> B[AWS Bedrock - Claude Haiku]
-    AR --> DDB[(DynamoDB - User Context Store)]
-    AR --> KMS[AWS KMS - Per User Key]
+    LAMBDA --> OC[OpenClaw Framework]
 
-    AR --> MCP[MCP Tool Layer]
+    OC --> MCP[MCP Tool Layer]
 
     MCP --> T1[Subscriptions]
     MCP --> T2[Budget]
@@ -32,5 +30,9 @@ flowchart LR
     EXT --> M[MoEngage]
     EXT --> A[Atomic / ZeroHash / Astra]
 
-    AR --> OBS[Mixpanel / Analytics]
+    LAMBDA --> DDB[(DynamoDB - User Context Store)]
+    LAMBDA --> KMS[AWS KMS - Per User Key]
+    LAMBDA --> OBS[Mixpanel / Analytics]
+
+    B[AWS Bedrock - Claude Haiku] --> LAMBDA
 ```
