@@ -114,6 +114,7 @@ flowchart TD
 
     %% Delivery
     subgraph L5["Layer 5 — Delivery layer\n\n"]
+    SPACER1[" "]:::hidden
         IQ["DynamoDB · insights_queue"]:::db
         NR["Notification Router Lambda"]:::l5
         MNG["MoEngage · push + email"]:::l5
@@ -146,4 +147,5 @@ flowchart TD
     classDef llm fill:#E1F5EE,stroke:#0F6E56,color:#085041,font-size:44px
     classDef store fill:#FAEEDA,stroke:#854F0B,color:#633806,font-size:44px
     classDef api fill:#EAF3DE,stroke:#3B6D11,color:#173404,font-size:44px
+    classDef hidden fill:none,stroke:none;
 ```
