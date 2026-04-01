@@ -193,6 +193,7 @@ flowchart TD
     RT -->|"stream tokens"| WS
     WS -->|"live response"| USER
 
+    RT --> L4
 
     %% styles (IMPORTANT)
     classDef input fill:#EAF3DE,stroke:#3B6D11,color:#173404,font-size:22px
