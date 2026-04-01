@@ -1,6 +1,6 @@
 ```mermaid
 %%{init: {'theme':'default', 'themeVariables': {
-    'fontSize': '44px',
+    'fontSize': '33px',
     'primaryTextColor': '#000',
     'lineColor': '#333'
 }}}%%
@@ -12,7 +12,7 @@ flowchart TD
     USER -->|"user message"| WS
 
     %% ─── Layer 1 · Data foundation ─────────────────────────────────
-    subgraph L1["Layer 1 — Data foundation\n"]
+    subgraph L1["Layer 1 — Data foundation"]
         AS["AeroSync / Flinks webhook"]:::input
         TI["Transaction Ingestor Lambda"]:::l1
         TXN["DynamoDB · transactions"]:::db
@@ -78,7 +78,7 @@ flowchart TD
     KMS -->|"decrypt key"| RT
 
     %% ─── Layer 4 · MCP tool layer ───────────────────────────────────
-    subgraph L4["Layer 4 — MCP tool layer\n"]
+    subgraph L4["Layer 4 — MCP tool layer"]
         direction TB
 
         subgraph PHASE1["Phase 1 · Revenue"]
@@ -113,8 +113,7 @@ flowchart TD
     end
 
     %% Delivery
-    subgraph L5["Layer 5 — Delivery layer\n\n"]
-    SPACER1[" "]:::hidden
+    subgraph L5["Layer 5 — Delivery layer"]
         IQ["DynamoDB · insights_queue"]:::db
         NR["Notification Router Lambda"]:::l5
         MNG["MoEngage · push + email"]:::l5
@@ -133,19 +132,18 @@ flowchart TD
     RT --> L4
 
     %% styles (IMPORTANT)
-    classDef input fill:#EAF3DE,stroke:#3B6D11,color:#173404,font-size:44px
-    classDef output fill:#1D9E75,stroke:#0F6E56,color:#E1F5EE,font-size:44px
-    classDef infra fill:#EEEDFE,stroke:#534AB7,color:#26215C,font-size:44px
-    classDef l1 fill:#E1F5EE,stroke:#0F6E56,color:#085041,font-size:44px
-    classDef l2 fill:#EEEDFE,stroke:#534AB7,color:#26215C,font-size:44px
-    classDef l3 fill:#534AB7,stroke:#3C3489,color:#EEEDFE,font-size:44px
-    classDef core fill:#3C3489,stroke:#26215C,color:#EEEDFE,font-size:44px
-    classDef l4 fill:#FAEEDA,stroke:#854F0B,color:#412402,font-size:44px
-    classDef l5 fill:#FAECE7,stroke:#993C1D,color:#4A1B0C,font-size:44px
-    classDef db fill:#F1EFE8,stroke:#5F5E5A,color:#2C2C2A,font-size:44px
-    classDef sec fill:#FCEBEB,stroke:#A32D2D,color:#501313,font-size:44px
-    classDef llm fill:#E1F5EE,stroke:#0F6E56,color:#085041,font-size:44px
-    classDef store fill:#FAEEDA,stroke:#854F0B,color:#633806,font-size:44px
-    classDef api fill:#EAF3DE,stroke:#3B6D11,color:#173404,font-size:44px
-    classDef hidden fill:none,stroke:none;
+    classDef input fill:#EAF3DE,stroke:#3B6D11,color:#173404,font-size:33px
+    classDef output fill:#1D9E75,stroke:#0F6E56,color:#E1F5EE,font-size:33px
+    classDef infra fill:#EEEDFE,stroke:#534AB7,color:#26215C,font-size:33px
+    classDef l1 fill:#E1F5EE,stroke:#0F6E56,color:#085041,font-size:33px
+    classDef l2 fill:#EEEDFE,stroke:#534AB7,color:#26215C,font-size:33px
+    classDef l3 fill:#534AB7,stroke:#3C3489,color:#EEEDFE,font-size:33px
+    classDef core fill:#3C3489,stroke:#26215C,color:#EEEDFE,font-size:33px
+    classDef l4 fill:#FAEEDA,stroke:#854F0B,color:#412402,font-size:33px
+    classDef l5 fill:#FAECE7,stroke:#993C1D,color:#4A1B0C,font-size:33px
+    classDef db fill:#F1EFE8,stroke:#5F5E5A,color:#2C2C2A,font-size:33px
+    classDef sec fill:#FCEBEB,stroke:#A32D2D,color:#501313,font-size:33px
+    classDef llm fill:#E1F5EE,stroke:#0F6E56,color:#085041,font-size:33px
+    classDef store fill:#FAEEDA,stroke:#854F0B,color:#633806,font-size:33px
+    classDef api fill:#EAF3DE,stroke:#3B6D11,color:#173404,font-size:33px
 ```
