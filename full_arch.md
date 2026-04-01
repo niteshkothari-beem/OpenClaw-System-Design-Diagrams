@@ -79,7 +79,7 @@ flowchart TD
 
     %% ─── Layer 4 · MCP tool layer ───────────────────────────────────
     subgraph L4["Layer 4 — MCP tool layer"]
-        direction LR
+        direction TB
 
         subgraph PHASE1["Phase 1 · Revenue"]
             TAX["TAX skill\ntax-classifier\ntax-projector"]:::l4
