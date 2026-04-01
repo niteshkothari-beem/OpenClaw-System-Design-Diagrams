@@ -12,7 +12,7 @@ flowchart TD
     USER -->|"user message"| WS
 
     %% ─── Layer 1 · Data foundation ─────────────────────────────────
-    subgraph L1["Layer 1 — Data foundation"]
+    subgraph L1["Layer 1 — Data foundation\n"]
         AS["AeroSync / Flinks webhook"]:::input
         TI["Transaction Ingestor Lambda"]:::l1
         TXN["DynamoDB · transactions"]:::db
