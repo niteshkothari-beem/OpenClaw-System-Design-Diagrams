@@ -160,20 +160,20 @@ flowchart TD
   %%  RT -->|"invoke"| HYG
 
     %% Skills return results
-    TAX -->|"tool_result"| RT
-    DEBT -->|"tool_result"| RT
-    EVD -->|"tool_result"| RT
-    FED -->|"tool_result"| RT
-    HLT -->|"tool_result"| RT
-    MED -->|"tool_result"| RT
-    BIL -->|"tool_result"| RT
-    UTL -->|"tool_result"| RT
-    PRT -->|"tool_result"| RT
-    SCH -->|"tool_result"| RT
-    KID -->|"tool_result"| RT
-    AUT -->|"tool_result"| RT
-    NGO -->|"tool_result"| RT
-    GRO -->|"tool_result"| RT
+ %%   TAX -->|"tool_result"| RT
+  %%  DEBT -->|"tool_result"| RT
+  %%  EVD -->|"tool_result"| RT
+   %% FED -->|"tool_result"| RT
+  %%  HLT -->|"tool_result"| RT
+  %%  MED -->|"tool_result"| RT
+  %%  BIL -->|"tool_result"| RT
+  %%  UTL -->|"tool_result"| RT
+  %%  PRT -->|"tool_result"| RT
+  %%  SCH -->|"tool_result"| RT
+  %%  KID -->|"tool_result"| RT
+  %%  AUT -->|"tool_result"| RT
+  %%  NGO -->|"tool_result"| RT
+  %%  GRO -->|"tool_result"| RT
     HYG -->|"tool_result"| RT
 
     %% Delivery
