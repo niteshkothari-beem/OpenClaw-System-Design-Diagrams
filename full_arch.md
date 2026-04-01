@@ -110,71 +110,7 @@ flowchart TD
             GRO["GROCERY skill\ngrocery-optimizer"]:::l4
             HYG["HYGIENE skill\nmonthly-report"]:::l4
         end
-
-        subgraph EXTAPIS["External APIs"]
-            direction TB
-            IRS["IRS tables · hardcoded"]:::api
-            HHS["HHS FPL · hardcoded"]:::api
-            GRX["GoodRx API"]:::api
-            HCG["healthcare.gov"]:::api
-            OE["211.org API"]:::api
-            EVT["Eventbrite"]:::api
-            NOA["NOAA CPC"]:::api
-            EF["Even Financial"]:::api
-            ZEB["The Zebra"]:::api
-            GGL["Google Places"]:::api
-        end
-
-    %%    TAX -->|"call"| IRS
-    %%    FED -->|"call"| HHS
-    %%    FED -->|"call"| OE
-    %%    HLT -->|"call"| HCG
-    %%    HLT -->|"call"| EF
-    %%    MED -->|"call"| GRX
-     %%   DEBT -->|"call"| EF
-     %%   BIL -->|"call"| EF
-     %%   UTL -->|"call"| NOA
-    %%    AUT -->|"call"| EF
-    %%    AUT -->|"call"| ZEB
-    %%    KID -->|"call"| EVT
-    %%    KID -->|"call"| GGL
-    %%    NGO -->|"call"| OE
-     %%   GRO -->|"call"| GGL
     end
-
-    %% Runtime invokes each skill
-   %% RT -->|"invoke"| TAX
-   %% RT -->|"invoke"| DEBT
-   %% RT -->|"invoke"| EVD
-   %% RT -->|"invoke"| FED
-  %%  RT -->|"invoke"| HLT
-  %%  RT -->|"invoke"| MED
-  %%  RT -->|"invoke"| BIL
-  %%  RT -->|"invoke"| UTL
-  %%  RT -->|"invoke"| PRT
-  %%  RT -->|"invoke"| SCH
-  %%  RT -->|"invoke"| KID
-  %%  RT -->|"invoke"| AUT
-  %%  RT -->|"invoke"| NGO
-  %%  RT -->|"invoke"| GRO
-  %%  RT -->|"invoke"| HYG
-
-    %% Skills return results
- %%   TAX -->|"tool_result"| RT
-  %%  DEBT -->|"tool_result"| RT
-  %%  EVD -->|"tool_result"| RT
-   %% FED -->|"tool_result"| RT
-  %%  HLT -->|"tool_result"| RT
-  %%  MED -->|"tool_result"| RT
-  %%  BIL -->|"tool_result"| RT
-  %%  UTL -->|"tool_result"| RT
-  %%  PRT -->|"tool_result"| RT
-  %%  SCH -->|"tool_result"| RT
-  %%  KID -->|"tool_result"| RT
-  %%  AUT -->|"tool_result"| RT
-  %%  NGO -->|"tool_result"| RT
-  %%  GRO -->|"tool_result"| RT
-  %%  HYG -->|"tool_result"| RT
 
     %% Delivery
     subgraph L5["Layer 5 — Delivery layer"]
