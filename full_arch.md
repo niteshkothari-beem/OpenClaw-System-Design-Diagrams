@@ -125,39 +125,39 @@ flowchart TD
             GGL["Google Places"]:::api
         end
 
-        TAX -->|"call"| IRS
-        FED -->|"call"| HHS
-        FED -->|"call"| OE
-        HLT -->|"call"| HCG
-        HLT -->|"call"| EF
-        MED -->|"call"| GRX
-        DEBT -->|"call"| EF
-        BIL -->|"call"| EF
-        UTL -->|"call"| NOA
-        AUT -->|"call"| EF
-        AUT -->|"call"| ZEB
-        KID -->|"call"| EVT
-        KID -->|"call"| GGL
-        NGO -->|"call"| OE
+    %%    TAX -->|"call"| IRS
+    %%    FED -->|"call"| HHS
+    %%    FED -->|"call"| OE
+    %%    HLT -->|"call"| HCG
+    %%    HLT -->|"call"| EF
+    %%    MED -->|"call"| GRX
+     %%   DEBT -->|"call"| EF
+     %%   BIL -->|"call"| EF
+     %%   UTL -->|"call"| NOA
+    %%    AUT -->|"call"| EF
+    %%    AUT -->|"call"| ZEB
+    %%    KID -->|"call"| EVT
+    %%    KID -->|"call"| GGL
+    %%    NGO -->|"call"| OE
         GRO -->|"call"| GGL
     end
 
     %% Runtime invokes each skill
-    RT -->|"invoke"| TAX
-    RT -->|"invoke"| DEBT
-    RT -->|"invoke"| EVD
-    RT -->|"invoke"| FED
-    RT -->|"invoke"| HLT
-    RT -->|"invoke"| MED
-    RT -->|"invoke"| BIL
-    RT -->|"invoke"| UTL
-    RT -->|"invoke"| PRT
-    RT -->|"invoke"| SCH
-    RT -->|"invoke"| KID
-    RT -->|"invoke"| AUT
-    RT -->|"invoke"| NGO
-    RT -->|"invoke"| GRO
-    RT -->|"invoke"| HYG
+   %% RT -->|"invoke"| TAX
+   %% RT -->|"invoke"| DEBT
+   %% RT -->|"invoke"| EVD
+   %% RT -->|"invoke"| FED
+  %%  RT -->|"invoke"| HLT
+  %%  RT -->|"invoke"| MED
+  %%  RT -->|"invoke"| BIL
+  %%  RT -->|"invoke"| UTL
+  %%  RT -->|"invoke"| PRT
+  %%  RT -->|"invoke"| SCH
+  %%  RT -->|"invoke"| KID
+  %%  RT -->|"invoke"| AUT
+  %%  RT -->|"invoke"| NGO
+  %%  RT -->|"invoke"| GRO
+  %%  RT -->|"invoke"| HYG
 
     %% Skills return results
     TAX -->|"tool_result"| RT
@@ -193,7 +193,6 @@ flowchart TD
     RT -->|"stream tokens"| WS
     WS -->|"live response"| USER
 
-    L3 --> L4
 
     %% styles (IMPORTANT)
     classDef input fill:#EAF3DE,stroke:#3B6D11,color:#173404,font-size:22px
