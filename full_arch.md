@@ -1,6 +1,6 @@
 ```mermaid
 %%{init: {'theme':'default', 'themeVariables': {
-    'fontSize': '22px',
+    'fontSize': '32px',
     'primaryTextColor': '#000',
     'lineColor': '#333'
 }}}%%
