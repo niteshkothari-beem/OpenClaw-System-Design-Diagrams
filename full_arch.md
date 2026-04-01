@@ -1,6 +1,6 @@
 ```mermaid
 %%{init: {'theme':'default', 'themeVariables': {
-    'fontSize': '52px',
+    'fontSize': '44px',
     'primaryTextColor': '#000',
     'lineColor': '#333'
 }}}%%
@@ -132,18 +132,18 @@ flowchart TD
     RT --> L4
 
     %% styles (IMPORTANT)
-    classDef input fill:#EAF3DE,stroke:#3B6D11,color:#173404,font-size:22px
-    classDef output fill:#1D9E75,stroke:#0F6E56,color:#E1F5EE,font-size:22px
-    classDef infra fill:#EEEDFE,stroke:#534AB7,color:#26215C,font-size:22px
-    classDef l1 fill:#E1F5EE,stroke:#0F6E56,color:#085041,font-size:22px
-    classDef l2 fill:#EEEDFE,stroke:#534AB7,color:#26215C,font-size:22px
-    classDef l3 fill:#534AB7,stroke:#3C3489,color:#EEEDFE,font-size:22px
-    classDef core fill:#3C3489,stroke:#26215C,color:#EEEDFE,font-size:22px
-    classDef l4 fill:#FAEEDA,stroke:#854F0B,color:#412402,font-size:22px
-    classDef l5 fill:#FAECE7,stroke:#993C1D,color:#4A1B0C,font-size:22px
-    classDef db fill:#F1EFE8,stroke:#5F5E5A,color:#2C2C2A,font-size:22px
-    classDef sec fill:#FCEBEB,stroke:#A32D2D,color:#501313,font-size:22px
-    classDef llm fill:#E1F5EE,stroke:#0F6E56,color:#085041,font-size:22px
-    classDef store fill:#FAEEDA,stroke:#854F0B,color:#633806,font-size:22px
-    classDef api fill:#EAF3DE,stroke:#3B6D11,color:#173404,font-size:22px
+    classDef input fill:#EAF3DE,stroke:#3B6D11,color:#173404,font-size:44px
+    classDef output fill:#1D9E75,stroke:#0F6E56,color:#E1F5EE,font-size:44px
+    classDef infra fill:#EEEDFE,stroke:#534AB7,color:#26215C,font-size:44px
+    classDef l1 fill:#E1F5EE,stroke:#0F6E56,color:#085041,font-size:44px
+    classDef l2 fill:#EEEDFE,stroke:#534AB7,color:#26215C,font-size:44px
+    classDef l3 fill:#534AB7,stroke:#3C3489,color:#EEEDFE,font-size:44px
+    classDef core fill:#3C3489,stroke:#26215C,color:#EEEDFE,font-size:44px
+    classDef l4 fill:#FAEEDA,stroke:#854F0B,color:#412402,font-size:44px
+    classDef l5 fill:#FAECE7,stroke:#993C1D,color:#4A1B0C,font-size:44px
+    classDef db fill:#F1EFE8,stroke:#5F5E5A,color:#2C2C2A,font-size:44px
+    classDef sec fill:#FCEBEB,stroke:#A32D2D,color:#501313,font-size:44px
+    classDef llm fill:#E1F5EE,stroke:#0F6E56,color:#085041,font-size:44px
+    classDef store fill:#FAEEDA,stroke:#854F0B,color:#633806,font-size:44px
+    classDef api fill:#EAF3DE,stroke:#3B6D11,color:#173404,font-size:44px
 ```
