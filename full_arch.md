@@ -139,7 +139,7 @@ flowchart TD
     %%    KID -->|"call"| EVT
     %%    KID -->|"call"| GGL
     %%    NGO -->|"call"| OE
-        GRO -->|"call"| GGL
+     %%   GRO -->|"call"| GGL
     end
 
     %% Runtime invokes each skill
@@ -174,7 +174,7 @@ flowchart TD
   %%  AUT -->|"tool_result"| RT
   %%  NGO -->|"tool_result"| RT
   %%  GRO -->|"tool_result"| RT
-    HYG -->|"tool_result"| RT
+  %%  HYG -->|"tool_result"| RT
 
     %% Delivery
     subgraph L5["Layer 5 — Delivery layer"]
