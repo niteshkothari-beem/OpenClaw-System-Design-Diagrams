@@ -78,7 +78,7 @@ flowchart TD
     KMS -->|"decrypt key"| RT
 
     %% ─── Layer 4 · MCP tool layer ───────────────────────────────────
-    subgraph L4["Layer 4 — MCP tool layer"]
+    subgraph L4["Layer 4 — MCP tool layer\n"]
         direction TB
 
         subgraph PHASE1["Phase 1 · Revenue"]
@@ -113,7 +113,7 @@ flowchart TD
     end
 
     %% Delivery
-    subgraph L5["Layer 5 — Delivery layer"]
+    subgraph L5["Layer 5 — Delivery layer\n\n"]
         IQ["DynamoDB · insights_queue"]:::db
         NR["Notification Router Lambda"]:::l5
         MNG["MoEngage · push + email"]:::l5
